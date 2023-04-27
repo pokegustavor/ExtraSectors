@@ -19,16 +19,6 @@ namespace ExtraSectors
                     break;
                 }
             }
-            for (int k = 0; k < 3000; k++)
-            {
-                PLSectorInfo randomSectorInfo = __instance.GetRandomSectorInfo(___m_RandomGenerator.Next());
-                if (randomSectorInfo.VisualIndication == ESectorVisualIndication.NONE && randomSectorInfo.MySPI.Faction != 4)
-                {
-                    randomSectorInfo.Name = __instance.StarNameGenerator.GetName(__instance.Seed + randomSectorInfo.ID) + " Sys (" + randomSectorInfo.ID + ")";
-                    randomSectorInfo.VisualIndication = ESectorVisualIndication.MOLTEN_ASTEROID;
-                    break;
-                }
-            }
             for (int j = 0; j < __instance.GenGalaxyScale * 8; j++)
             {
                 for (int k = 0; k < 3000; k++)
